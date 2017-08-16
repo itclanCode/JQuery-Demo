@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		    *{
+		    	padding:0;
+		    	margin:0;
+		    }
+		    body{
+		    	height:4000px;
+		    }
+		    a{
+		    	width:100px;
+		    	height:100px;
+		    	text-decoration:none;
+		    	color:#666;
+		    	position:fixed;
+		    	bottom:30px;
+		    	right:10px;
+		    	display:none;
+		    }
+	</style>
+</head>
+<body>
+		<a href="javascript:;" class="top">跳回顶部</a>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+				  $(window).scroll(function(){  // 滚动条滚动时
+				  	 if($(window).scrollTop()>300){
+				  	 	$(".top").fadeIn(1000);
+				  	 }else{
+				  	 	$(".top").fadeOut(1000);
+				  	 }
+				  });
+			      // 点击底部回到顶部按钮时,跳转到最顶部
+			      $(".top").click(function(e){
+			      	  e.preventDefault();  // a链接,记得要阻止默认的跳转
+			      	  $("html,body").animate({scrollTop:0},800);
+			      	  return false;  // 这里也是阻止默认事件
+			      })
+		</script>
+</body>
+</html>
