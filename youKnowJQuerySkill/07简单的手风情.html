@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>简单的手风琴</title>
+</head>
+<body>
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			     $("#accoration").find(".content").hide();
+
+			     // Accordion
+			     $("#accordion").find(".accoration-header").click(function(){
+			     	 var next = $(this).next();
+			     	 next.slideToggle("fast");
+			     	 $(".content").not(next).slideUp("fast");
+			     	 return false;
+			     })
+		</script>
+</body>
+</html>

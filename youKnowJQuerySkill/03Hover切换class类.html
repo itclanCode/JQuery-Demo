@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+		<div class="btn">按钮</div>
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+				 /*比方说,当用户将鼠标悬停在你页面上的元素时,你想改变其视觉效果,当用户鼠标悬停在元素上,你可以在该元素上添加一个class类,当鼠标停止悬停事件时移除此class类*/
+			     $(".btn").hover(function(){
+			     	 $(this).addClass('hover');
+			     },function(){
+			     	 $(this).removeClass('hover');
+			     })
+			     /*如果想要一个简单的方式使用toggleClass方法,则仅仅需要添加必要的css*/
+			     $(".btn").hover(function(){
+			     	$(this).toogleClass("hover");
+			     })
+		</script>
+</body>
+</html>

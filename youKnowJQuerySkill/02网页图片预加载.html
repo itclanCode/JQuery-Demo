@@ -21,8 +21,18 @@
 
 		<script type="text/javascript">
 			     $.preloadImages = function(){
-			     	
+			     	 for(var i = 0;i<arguments.length;i++){
+			     	 	$("<img>").attr('src',arguments[i]);
+			     	 }	
 			     }
+			     $.preloadImages('img/hover-on.png','img/hover-of.png');
+			     // 自动修补破损图像
+			     /*如果你碰巧发现在你的网站上发现破损的图像链接,一个个去替代他们是痛苦的,以下这个简单的代码可以节省很多的麻烦*/
+			     $("img").on('error',function(){
+			     	 if(!$(this).hasClass('broken-image')){
+			     	 	$(this).prop('src','img/broken.png').addClass('broken-image');
+			     	 }
+			     });
 		</script>
 </body>
 </html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+		<a href="javascript:;" class="link">停止正在加载的链接</a>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			     /*有时,你不想链接到特定的网页或者重新载入页面,你可能想让她们做一些其他事情,如触发一些其他脚本,这是防止违约行为的技巧*/
+			     $("a.link").click(function(e){
+			     	e.preventDefault();
+			     })
+		</script>
+</body>
+</html>

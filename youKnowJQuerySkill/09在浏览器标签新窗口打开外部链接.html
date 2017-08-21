@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>在浏览器标签/新窗口打开外部链接</title>
+</head>
+<body>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			      $("a[href^='http']").attr('target','_blank');
+			      $("a[href^=//]").attr("target","_blank");
+			      $("a[href^="+window.loacation.origin+']').attr("target",'_self');
+		</script>
+</body>
+</html>

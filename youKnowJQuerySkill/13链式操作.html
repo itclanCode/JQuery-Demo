@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+		<div id="elem"></div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript">
+			     $("#elem").show();
+			     $("#elem").html("bla");
+			     $("#elem").otherStuff();
+			     // 可以进行链式调用
+			     $("#elem").show().html('bla').otherStuff();
+				 // 另一个方法是在可变的元素缓存($作为前缀)
+				 var $elem = $('#elem');
+				 $elem.hide();
+				 $elem.html('bla');
+				 $elem.otherStuff();
+				 
+		</script>
+</body>
+</html>
